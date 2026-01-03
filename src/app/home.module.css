@@ -1,0 +1,32 @@
+/* Cursor Styles */
+.canvasCursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  display: none; /* Hidden by default for mobile/tablet */
+}
+
+.magicCursor {
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(212,175,55,1) 50%, rgba(0,0,0,0) 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+  mix-blend-mode: screen;
+  display: none; /* Hidden by default for mobile/tablet */
+}
+
+/* Show cursor only on desktop (larger than 1024px) */
+@media (min-width: 1025px) {
+  .canvasCursor {
+    display: block;
+  }
+  
+  .magicCursor {
+    display: block;
+  }
+}
